@@ -39,6 +39,6 @@ const postSchema = new Schema<PostStructure>({
   },
 });
 
-const Post = model("Post", postSchema, "Posts");
+const Post = model("Post", postSchema, "ivet_posts");
 
 export default Post;
