@@ -4,8 +4,6 @@ import connectToDatabase from "./database/connectToDatabase.js";
 
 const port = process.env.PORT || 4000;
 
-await connectToDatabase(
-  "mongodb+srv://ivet19:Mondongo2025@mondongo.g5yiugk.mongodb.net/Blog",
-);
+await connectToDatabase(process.env.DATABASE_CONNECTION_STRING);
 
 startServer(Number(port));
