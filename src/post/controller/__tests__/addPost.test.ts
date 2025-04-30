@@ -58,7 +58,7 @@ describe("Given the addPost method of PostController", () => {
         next as NextFunction,
       );
 
-      expect(res.json).toHaveBeenCalledWith(paellaMariscosPost);
+      expect(res.json).toHaveBeenCalledWith({ post: paellaMariscosPost });
     });
   });
 
