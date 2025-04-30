@@ -81,7 +81,7 @@ class PostController implements PostControllerStructure {
 
     const addedPost = await this.postModel.insertOne(newPost);
 
-    res.status(201).json(addedPost);
+    res.status(201).json({ post: addedPost });
   };
 
   public deletePost = async (
@@ -111,7 +111,7 @@ class PostController implements PostControllerStructure {
       return;
     }
 
-    res.status(200).json(deletedPost);
+    res.status(200).json({ post: deletedPost });
   };
 
   public getPostById = async (
@@ -141,7 +141,7 @@ class PostController implements PostControllerStructure {
       return;
     }
 
-    res.status(200).json(foundPost);
+    res.status(200).json({ post: foundPost });
   };
 }
 
