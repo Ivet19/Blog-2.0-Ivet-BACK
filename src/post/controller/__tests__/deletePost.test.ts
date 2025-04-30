@@ -55,7 +55,7 @@ describe("Given the deletePost method of PostController", () => {
         next as NextFunction,
       );
 
-      expect(res.json).toHaveBeenCalledWith(luffyBentoPostDto);
+      expect(res.json).toHaveBeenCalledWith({ post: luffyBentoPostDto });
     });
   });
 
