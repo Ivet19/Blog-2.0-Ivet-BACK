@@ -181,7 +181,7 @@ export const tortillaBetanzosPost: PostStructure = {
 };
 
 export const paellaMariscosPost: PostStructure = {
-  _id: "1",
+  _id: "123456789123456789123454",
   author: "Albert Adrià",
   content: `La paella de mariscos de El Palmar es una auténtica celebración del Mediterráneo. Preparada en una paellera tradicional sobre fuego de leña, esta paella deslumbra por su arroz suelto impregnado de un sabroso caldo de mariscos. Gambas, mejillones, calamares y cigalas coronan el plato, aportando frescura y una explosión de sabores marinos. Cada grano de arroz refleja el esmero y la pasión por la cocina valenciana. El restaurante, rodeado de naturaleza y cercano a la Albufera, ofrece el escenario perfecto para disfrutar de este clásico en su máxima expresión. Una experiencia gastronómica inolvidable.`,
   imageUrl: "http://paellamariscos.webp",
@@ -189,8 +189,8 @@ export const paellaMariscosPost: PostStructure = {
   publishDate: new Date("2025-04-27"),
   tags: ["paella", "mariscos", "elpalmar", "valencia"],
   title: "Paella de Mariscos: disfruta de la mejor paella en El Palmar",
-  smallImageUrl: "",
-  detailImageUrl: "",
+  smallImageUrl: "http://paellamariscos.webp",
+  detailImageUrl: "http://paellamariscos.webp",
 };
 
 export const animeFoodPosts = [
@@ -208,5 +208,3 @@ export const animeFoodPosts = [
   tortillaBetanzosPost,
   huevosRotosBruc159Post,
 ];
-
-export const reducedAnimeFoodPosts = [attackOnTitanMeatPost, bleachSushiPost];
