@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import { GetPostsResponseBody } from "../types.js";
 
 export interface PostControllerStructure {
   getPostsPage: (req: PostRequest, res: Response) => Promise<void>;
@@ -12,7 +13,7 @@ export interface PostControllerStructure {
 
 export type PostRequest = Request<
   PostParams,
-  Record<string, unknown>,
+  Record<string, GetPostsResponseBody>,
   Record<string, unknown>,
   PostQuery
 >;
