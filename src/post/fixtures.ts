@@ -126,8 +126,8 @@ const pokeballDonutsPost: PostStructure = {
   detailImageUrl: "",
 };
 
-const bleachSushiPost: PostStructure = {
-  _id: "10",
+export const bleachSushiPost: PostStructure = {
+  _id: "123456789123456789123457",
   author: "Soul Society Sushiman",
   content:
     "El sushi favorito de los Shinigamis. Aprende a preparar nigiris y makis que podrían servirse en el Seireitei.",
@@ -136,12 +136,12 @@ const bleachSushiPost: PostStructure = {
   publishDate: new Date("2025-04-01"),
   tags: ["bleach", "sushi", "animefood"],
   title: "Sushi espiritual para Shinigamis 🍣🗡️",
-  smallImageUrl: "",
-  detailImageUrl: "",
+  smallImageUrl: "https://example.com/bleach-sushi.jpg",
+  detailImageUrl: "https://example.com/bleach-sushi.jpg",
 };
 
-const attackOnTitanMeatPost: PostStructure = {
-  _id: "11",
+export const attackOnTitanMeatPost: PostStructure = {
+  _id: "123456789123456789123456",
   author: "Sasha la Comelotodo",
   content:
     "Carne asada al estilo de los Reconocimientos. Esta receta te dará fuerzas para escalar muros (o simplemente sobrevivir un lunes).",
@@ -150,8 +150,8 @@ const attackOnTitanMeatPost: PostStructure = {
   publishDate: new Date("2025-03-29"),
   tags: ["attackontitan", "carne", "sasha"],
   title: "Carne para titanes hambrientos 🍖🛡️",
-  smallImageUrl: "",
-  detailImageUrl: "",
+  smallImageUrl: "https://example.com/aot-meat.jpg",
+  detailImageUrl: "https://example.com/aot-meat.jpg",
 };
 
 export const huevosRotosBruc159Post: PostStructure = {
@@ -208,3 +208,5 @@ export const animeFoodPosts = [
   tortillaBetanzosPost,
   huevosRotosBruc159Post,
 ];
+
+export const reducedAnimeFoodPosts = [attackOnTitanMeatPost, bleachSushiPost];
