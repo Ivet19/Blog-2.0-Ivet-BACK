@@ -1,11 +1,11 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import request from "supertest";
 import mongoose from "mongoose";
-import connectToDatabase from "../../database/connectToDatabase.js";
-import Post from "../../post/model/Post.js";
-import { attackOnTitanMeatPost, bleachSushiPost } from "../../post/fixtures.js";
-import app from "../app.js";
-import { GetPostsResponseBody } from "../../post/types.js";
+import connectToDatabase from "../../../database/connectToDatabase.js";
+import Post from "../../model/Post.js";
+import { attackOnTitanMeatPost, bleachSushiPost } from "../../fixtures.js";
+import app from "../../../server/app.js";
+import { GetPostsResponseBody } from "../../types.js";
 
 let server: MongoMemoryServer;
 

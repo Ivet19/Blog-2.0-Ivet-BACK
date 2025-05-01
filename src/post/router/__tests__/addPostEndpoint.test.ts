@@ -1,16 +1,16 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import request from "supertest";
 import mongoose from "mongoose";
-import connectToDatabase from "../../database/connectToDatabase.js";
-import Post from "../../post/model/Post.js";
+import connectToDatabase from "../../../database/connectToDatabase.js";
+import Post from "../../model/Post.js";
 import {
   attackOnTitanMeatPost,
   bleachSushiPost,
   paellaMariscosPost,
-} from "../../post/fixtures.js";
-import { addPostResponseBody } from "../../post/types.js";
-import app from "../app.js";
-import { paellaMariscosPostData } from "../../post/postDataFixtures.js";
+} from "../../fixtures.js";
+import { postResponseBody } from "../../types.js";
+import app from "../../../server/app.js";
+import { paellaMariscosPostData } from "../../postDataFixtures.js";
 
 let server: MongoMemoryServer;
 
@@ -34,7 +34,7 @@ describe("Given the POST/posts endpoint", () => {
       const newPost = paellaMariscosPostData;
 
       const response = await request(app).post("/posts").send(newPost);
-      const body = response.body as addPostResponseBody;
+      const body = response.body as postResponseBody;
 
       expect(response.status).toBe(201);
       expect(body.post).toEqual(
