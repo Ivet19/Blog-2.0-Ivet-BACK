@@ -21,8 +21,8 @@ afterEach(async () => {
   await server.stop();
 });
 
-describe("Given the GET/posts/123456789123456789123456 endpoint", () => {
-  describe("When it receives a request", () => {
+describe("Given the GET/posts/:id endpoint", () => {
+  describe("When it receives a request with /posts/123456789123456789123456", () => {
     test("Then it should respond with a 200 status code and Carne para titanes hambrientos 🍖🛡️ post", async () => {
       await Post.create(attackOnTitanMeatPost, bleachSushiPost);
 
@@ -39,24 +39,20 @@ describe("Given the GET/posts/123456789123456789123456 endpoint", () => {
       );
     });
   });
-});
 
-describe("Given the GET/posts/000 endpoint", () => {
-  describe("When it receives a request", () => {
-    test("Then it should respond with a 406 status code and a 'Not valid id' error message", async () => {
+  describe("When it receives a request with /posts/000 invalid and non existent id", () => {
+    test("Then it should respond with a 400 status code and a 'Not valid id' error message", async () => {
       await Post.create(attackOnTitanMeatPost, bleachSushiPost);
 
       const response = await request(app).get("/posts/000");
       const body = response.body as { error: string };
 
-      expect(response.status).toBe(406);
+      expect(response.status).toBe(400);
       expect(body.error).toBe("Id not valid");
     });
   });
-});
 
-describe("Given the GET/posts/573561324567825367892345 non existing post id endpoint", () => {
-  describe("When it receives a request", () => {
+  describe("When it receives a request with /posts/573561324567825367892345 non existent id", () => {
     test("Then it should respond with a 404 status code and a 'Post not found' error message", async () => {
       await Post.create(attackOnTitanMeatPost, bleachSushiPost);
 
