@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { Model } from "mongoose";
+import { Model, isValidObjectId } from "mongoose";
 import { PostData, PostStructure } from "../types.js";
 import { PostControllerStructure, PostRequest } from "./types.js";
 import ServerError from "../../server/ServerError/ServerError.js";
@@ -91,10 +91,10 @@ class PostController implements PostControllerStructure {
   ): Promise<void> => {
     const postId = req.params.postId;
 
-    const idLength = 24;
+    const isValidId = isValidObjectId(postId);
 
-    if (postId.length !== idLength) {
-      const error = new ServerError(406, "Id not valid");
+    if (!isValidId) {
+      const error = new ServerError(400, "Id not valid");
       next(error);
 
       return;
@@ -121,10 +121,10 @@ class PostController implements PostControllerStructure {
   ): Promise<void> => {
     const postId = req.params.postId;
 
-    const idLenght = 24;
+    const isValidId = isValidObjectId(postId);
 
-    if (postId.length !== idLenght) {
-      const error = new ServerError(406, "Id not valid");
+    if (!isValidId) {
+      const error = new ServerError(400, "Id not valid");
 
       next(error);
 
