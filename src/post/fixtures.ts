@@ -185,9 +185,22 @@ export const paellaMariscosPost: PostStructure = {
   author: "Albert Adrià",
   content: `La paella de mariscos de El Palmar es una auténtica celebración del Mediterráneo. Preparada en una paellera tradicional sobre fuego de leña, esta paella deslumbra por su arroz suelto impregnado de un sabroso caldo de mariscos. Gambas, mejillones, calamares y cigalas coronan el plato, aportando frescura y una explosión de sabores marinos. Cada grano de arroz refleja el esmero y la pasión por la cocina valenciana. El restaurante, rodeado de naturaleza y cercano a la Albufera, ofrece el escenario perfecto para disfrutar de este clásico en su máxima expresión. Una experiencia gastronómica inolvidable.`,
   imageUrl: "http://paellamariscos.webp",
-  imageAlt: "Paella de mariscos servida en una paellera tradicional",
+  imageAlt: "Plato de Paella de Mariscos",
   publishDate: new Date("2025-04-27"),
   tags: ["paella", "mariscos", "elpalmar", "valencia"],
+  title: "Paella de Mariscos: disfruta de la mejor paella en El Palmar",
+  smallImageUrl: "http://paellamariscos.webp",
+  detailImageUrl: "http://paellamariscos.webp",
+};
+
+export const paellaMariscosWithoutTagsPost: PostStructure = {
+  _id: "123456789123456789123454",
+  author: "Albert Adrià",
+  content: `La paella de mariscos de El Palmar es una auténtica celebración del Mediterráneo. Preparada en una paellera tradicional sobre fuego de leña, esta paella deslumbra por su arroz suelto impregnado de un sabroso caldo de mariscos. Gambas, mejillones, calamares y cigalas coronan el plato, aportando frescura y una explosión de sabores marinos. Cada grano de arroz refleja el esmero y la pasión por la cocina valenciana. El restaurante, rodeado de naturaleza y cercano a la Albufera, ofrece el escenario perfecto para disfrutar de este clásico en su máxima expresión. Una experiencia gastronómica inolvidable.`,
+  imageUrl: "http://paellamariscos.webp",
+  imageAlt: "Plato de Paella de Mariscos",
+  publishDate: new Date("2025-04-27"),
+  tags: ["food"],
   title: "Paella de Mariscos: disfruta de la mejor paella en El Palmar",
   smallImageUrl: "http://paellamariscos.webp",
   detailImageUrl: "http://paellamariscos.webp",
