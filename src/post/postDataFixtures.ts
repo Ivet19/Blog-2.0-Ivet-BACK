@@ -24,7 +24,19 @@ export const paellaMariscosPostData: PostData = {
   title: "Paella de Mariscos: disfruta de la mejor paella en El Palmar",
   content: `La paella de mariscos de El Palmar es una auténtica celebración del Mediterráneo. Preparada en una paellera tradicional sobre fuego de leña, esta paella deslumbra por su arroz suelto impregnado de un sabroso caldo de mariscos. Gambas, mejillones, calamares y cigalas coronan el plato, aportando frescura y una explosión de sabores marinos. Cada grano de arroz refleja el esmero y la pasión por la cocina valenciana. El restaurante, rodeado de naturaleza y cercano a la Albufera, ofrece el escenario perfecto para disfrutar de este clásico en su máxima expresión. Una experiencia gastronómica inolvidable.`,
   imageUrl: "http://paellamariscos.webp",
-  imageAlt: "Paella de mariscos servida en una paellera tradicional",
+  imageAlt: "",
+  author: "Albert Adrià",
+  publishDate: "",
+  tags: "paella, mariscos, el palmar, valencia",
+  smallImageUrl: "",
+  detailImageUrl: "",
+};
+
+export const paellaMariscosWithoutTagsPostData: PostData = {
+  title: "Paella de Mariscos: disfruta de la mejor paella en El Palmar",
+  content: `La paella de mariscos de El Palmar es una auténtica celebración del Mediterráneo. Preparada en una paellera tradicional sobre fuego de leña, esta paella deslumbra por su arroz suelto impregnado de un sabroso caldo de mariscos. Gambas, mejillones, calamares y cigalas coronan el plato, aportando frescura y una explosión de sabores marinos. Cada grano de arroz refleja el esmero y la pasión por la cocina valenciana. El restaurante, rodeado de naturaleza y cercano a la Albufera, ofrece el escenario perfecto para disfrutar de este clásico en su máxima expresión. Una experiencia gastronómica inolvidable.`,
+  imageUrl: "http://paellamariscos.webp",
+  imageAlt: "",
   author: "Albert Adrià",
   publishDate: "",
   tags: "",
